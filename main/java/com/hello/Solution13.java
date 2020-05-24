@@ -1,33 +1,19 @@
 package com.hello;
-/*罗马数字转整数
- * 
-I             1
-V             5
-X             10
-L             50
-C             100
-D             500
-M             1000*/
+/**
+ * I             1
+ * V             5
+ * X             10
+ * L             50
+ * C             100
+ * D             500
+ * M             1000
+ * @author Administrator
+ */
 public class Solution13 {
     public int romanToInt(String s) {
     	int sum = 0;
     	
     	for(int i = 0;i < s.length();i ++) {
-//    		if(s.charAt(i) == 'M') {
-//    			sum += 1000;
-//    		} else if(s.charAt(i) == 'D') {
-//    			sum += 500;
-//    		} else if(s.charAt(i) == 'C') {
-//    			sum += 100;
-//    		} else if(s.charAt(i) == 'L') {
-//    			sum += 50;
-//    		} else if(s.charAt(i) == 'X') {
-//    			sum += 10;
-//    		} else if(s.charAt(i) == 'V') {
-//    			sum += 5;
-//    		} else if(s.charAt(i) == 'I') {
-//    			sum += 1;
-//    		}
     		switch(s.charAt(i)) {
     			case 'M' : sum += 1000; break;
     			case 'D' : sum += 500; break;

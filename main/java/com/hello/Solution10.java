@@ -13,6 +13,7 @@ import java.util.Stack;
  * s 可能为空，且只包含从 a-z 的小写字母。
  * p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
  *
+ * @author Administrator
  */
 public class Solution10 {
 

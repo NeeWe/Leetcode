@@ -30,6 +30,10 @@ public class Solution10 {
     public boolean isMatch(String s, String p) {
         boolean flag = true;
 
+        if(isBlank(s) && isBlank(p) || ".*".equals(p)) {
+            return flag;
+        }
+
         Stack<Character> seqStack = new Stack<>();
         Stack<Character> ptnStack = new Stack<>();
 
@@ -42,16 +46,8 @@ public class Solution10 {
             ** 等同于 *
          */
 
-        while(!seqStack.empty()) {
-            Character seqChar = seqStack.pop();
-            Character ptnChar = ptnStack.pop();
-
-            if(seqChar != ptnChar) {
-                if(ptnChar != '.') {
-
-                }
-            }
-
+        while(!ptnStack.empty()) {
+            char pthChar = ptnStack.pop();
         }
 
 
@@ -59,9 +55,13 @@ public class Solution10 {
         return flag;
     }
 
-    public void addToStack(String s, Stack<Character> stack) {
+    private void addToStack(String s, Stack<Character> stack) {
         for(int i = s.length() -1; i >=0; i --) {
             stack.add(s.charAt(i));
         }
+    }
+
+    private boolean isBlank(String s) {
+        return s == null || s.length() == 0;
     }
 }
